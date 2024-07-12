@@ -62,9 +62,9 @@ jobs:
       - name: Generate ROS Address List
         run: |
           mkdir -p ./output/rsc
-          chmod +x generate.sh
+          chmod +x *.sh
           ./generate.sh ./output/text/chnroutes novpn ./output/rsc/address-list.rsc
-          ./generate.sh ./output/text/chnroutes.ipv6 novpn.ipv6 ./output/rsc/address-list.ipv6.rsc
+          ./generatev6.sh ./output/text/chnroutes.ipv6 novpn.ipv6 ./output/rsc/address-list.ipv6.rsc
           ./generate.sh ./output/text/tencent route-tencent ./output/rsc/route-tencent.rsc
 
       - name: Move files to publish directory
