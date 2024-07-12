@@ -69,7 +69,7 @@ jobs:
       - name: Move files to publish directory
         run: |
           mkdir -p publish
-          mv ./output/text/*.txt ./output/rsc/*.rsc  ./publish/
+          mv ./output/text/* ./output/rsc/*.rsc  ./publish/
 
       - name: Git push assets to "release" branch
         run: |
