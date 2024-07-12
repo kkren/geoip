@@ -84,13 +84,6 @@ jobs:
           git remote add geoip "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
           git push -f -u geoip release
 
-      - name: Purge jsdelivr CDN
-        run: |
-          cd publish || exit 1
-          for file in $(ls); do
-            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
-          done
-
       - name: Upload files to GitHub release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -98,3 +91,10 @@ jobs:
           file_glob: true
           file: ./publish/*
           tag: ${{ env.TAG_NAME }}
+          
+      - name: Purge jsdelivr CDN
+        run: |
+          cd publish || exit 1
+          for file in $(ls); do
+            curl -i "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/${file}"
+          done
