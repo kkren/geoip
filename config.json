@@ -94,6 +94,15 @@
       "type": "text",
       "action": "output",
       "args": {
+        "outputDir": "./output/text/tencent",
+        "wantedList": ["tencent"],
+        "onlyIPType": "ipv4"
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
         "outputDir": "./output/text/chnroutes.ipv6",
         "wantedList": ["cn", "private"],
         "onlyIPType": "ipv6"
