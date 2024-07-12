@@ -1,7 +1,7 @@
 make_ros() {
   local dir=$1
   local name=$2
-  echo "/ipv6 firewall address-list remove [/ip firewall address-list find list=$name]"
+  echo "/ipv6 firewall address-list remove [/ipv6 firewall address-list find list=$name]"
   echo "/ipv6 firewall address-list"
 
   for file in $1/*.txt; do
