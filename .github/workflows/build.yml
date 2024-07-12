@@ -63,8 +63,8 @@ jobs:
         run: |
           mkdir -p ./output/rsc
           chmod +x generate.sh
-          ./generate.sh ./output/text/chnroutes npvpn ./output/rsc/address-list.rsc
-          ./generate.sh ./output/text/chnroutes.ipv6 npvpn.ipv6 ./output/rsc/address-list.ipv6.rsc
+          ./generate.sh ./output/text/chnroutes novpn ./output/rsc/address-list.rsc
+          ./generate.sh ./output/text/chnroutes.ipv6 novpn.ipv6 ./output/rsc/address-list.ipv6.rsc
 
       - name: Move files to publish directory
         run: |
