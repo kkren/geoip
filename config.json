@@ -86,7 +86,17 @@
       "action": "output",
       "args": {
         "outputName": "chnroutes.txt",
-        "wantedList": ["cn", "private"]
+        "wantedList": ["cn", "private"],
+        "onlyIPType": "ipv4"
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputName": "chnroutes.ipv6.txt",
+        "wantedList": ["cn", "private"],
+        "onlyIPType": "ipv6"
       }
     }
   ]
