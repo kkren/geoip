@@ -103,6 +103,26 @@
       "type": "text",
       "action": "output",
       "args": {
+        "outputDir": "./output/text/cloudflare",
+        "wantedList": ["cloudflare"],
+        "onlyIPType": "ipv4"
+
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
+        "outputDir": "./output/text/cloudflare.ipv6",
+        "wantedList": ["cloudflare"],
+        "onlyIPType": "ipv6"
+
+      }
+    },
+    {
+      "type": "text",
+      "action": "output",
+      "args": {
         "outputDir": "./output/text/chnroutes.ipv6",
         "wantedList": ["cn", "private"],
         "onlyIPType": "ipv6"

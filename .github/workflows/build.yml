@@ -66,6 +66,8 @@ jobs:
           ./generate.sh ./output/text/chnroutes novpn ./output/rsc/address-list.rsc
           ./generatev6.sh ./output/text/chnroutes.ipv6 novpn.ipv6 ./output/rsc/address-list.ipv6.rsc
           ./generate.sh ./output/text/tencent route-tencent ./output/rsc/route-tencent.rsc
+          ./generate.sh ./output/text/cloudflare route-cloudflare ./output/rsc/route-cloudflare.rsc
+          ./generatev6.sh ./output/text/cloudflare.ipv6 route-cloudflare.ipv6 ./output/rsc/route-cloudflare.ipv6.rsc
 
       - name: Move files to publish directory
         run: |
