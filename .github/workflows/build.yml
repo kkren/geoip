@@ -88,9 +88,10 @@ jobs:
       - name: Verify mmdb files
         run: |
           cd ./output || exit 1
-          go install -v github.com/maxmind/mmdbverify@latest
+          # setup-go disables toolchain switching; mmdbverify requires a newer Go.
+          GOTOOLCHAIN=auto go install -v github.com/maxmind/mmdbverify@v1.2.0
           for name in $(ls *.mmdb); do
-            $(go env GOPATH)/bin/mmdbverify -file ${name}
+            $(go env GOPATH)/bin/mmdbverify -verbose -file ${name}
           done
 
       - name: Generate sha256 checksum for dat files
